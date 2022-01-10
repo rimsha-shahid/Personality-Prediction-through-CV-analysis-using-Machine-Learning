@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master Home.master.cs" Inherits="Personality_Prediction.Master_Page_for_Home_Page.Master_Home" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="shortcut icon" href="c:\users\wel\documents\visual studio 2015\Projects\Personality Prediction\Personality Prediction\Images\logo.png" />
+    <title>Personality Prediction </title>
+
+    <!--style sheet-->
+    <link href="Master%20Home.css" rel="stylesheet" />
+
+
+    <!--bootstrap links-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css' />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<meta charset="utf-8" />
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+     <!--navigation bar-->
+    <div class="container">
+    <div class="navbar">
+        <!--logo-->
+        <img class="logo" src="../Images/logo.png" />
+        
+        <nav>
+    <ul>
+          <!--Home-->
+      <li><a href="../User%20Home%20Page/User%20Home%20Page.aspx">Home</a></li>
+
+         <!--About Us-->
+      <li><a href="../User%20Home%20Page/About%20Us.aspx">About Us</a></li>
+
+         <!--Content us-->
+      <li><a href="../User%20Home%20Page/Contact%20Us.aspx">Contact Us</a></li>
+
+         <!--Sign Up-->
+      <li><a href="../User%20Home%20Page/Registration.aspx">Register</a></li>
+
+        <!--Log in-->
+      <li><a href="../User%20Home%20Page/Login.aspx">Login</a></li>
+    </ul>
+            </nav>
+  </div>
+      </div>
+
+    <div>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+</body>
+</html>

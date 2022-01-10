@@ -1,0 +1,82 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master Page.master.cs" Inherits="Personality_Prediction.Master_Page.Master_Page" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+ 
+	<!--logo-->
+	  <link rel="shortcut icon" href="C:\Users\Rimsha\Documents\Personality Prediction\Personality Prediction\Images\logo.png" />
+	
+	<!--title-->
+	<title>Personality Predictiont </title>
+
+	<!--bootstrap links-->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<meta charset="utf-8" />
+
+	<!--master page style sheet-->
+	<link href="Master%20Page.css" rel="stylesheet" />
+
+	<!--content holder-->
+	<asp:ContentPlaceHolder ID="head" runat="server">
+	</asp:ContentPlaceHolder>
+
+</head>
+<body>
+	 <!--navigation bar-->
+	<nav class="navbar navbar-default navigation">
+  <div class="container-fluid">
+	<div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#micon">
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	</button>
+
+		<!--logo-->
+		&nbsp;<img class="logo" src="../Images/logo.png" /></div>
+
+	<div class="collapse navbar-collapse" id="micon">
+	<ul class="nav navbar-nav navbar">
+
+		  <!--Aptitude questions-->
+	  <li><a class="AQ" href="#">Aptitude Questions</a></li>
+
+		
+		 <!--personality questions-->
+	  <li><a class="PQ" href="#">Personality Questions</a></li>
+
+				<!--list of job details-->
+	  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Job Details</a>
+		<ul class="dropdown-menu">
+		  <li><a href="../Job%20Details/Add%20Job%20Details.aspx">Add Job Details </a></li>
+		  <li><a href="../Job%20Details/Requirements%20Details.aspx">Requirement Details</a></li>
+		  <li><a href="../Job%20Details/Preferred%20CV.aspx">Prefered CV</a></li>
+		  <li><a href="../Job%20Details/Shortlist%20CV.aspx">Shortlist CV</a></li>
+		  </ul>
+	  </li>
+
+		<!--View Details -->
+	  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">View Details </a>
+		<ul class="dropdown-menu">
+		  <li><a href="../view%20Details/View%20Personality%20Questions.aspx">View Personality Questions</a></li>
+		  <li><a href="../view%20Details/View%20Aptitude%20Questions.aspx">View Aptitude Questions</a></li>
+		  <li><a href="../view%20Details/Job%20Deetails.aspx">View Job Deetails</a></li>
+		</ul>
+	  </li>
+
+			 <!--logout-->
+		 <li><a  target="_blank" class="glyphicon glyphicon-log-out" href="#" onclick="" runat="server" >Logout</a></li>
+	</ul>
+  </div>
+	  </div>
+</nav>
+
+	<!-- Content holder-->
+		<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+		</asp:ContentPlaceHolder>
+</body>
+</html>

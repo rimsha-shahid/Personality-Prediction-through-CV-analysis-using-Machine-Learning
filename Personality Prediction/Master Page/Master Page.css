@@ -1,0 +1,29 @@
+﻿body {
+    background-image: url('../Images/background.png');
+    background-size: cover;
+    position:relative;
+    padding-left:5%;
+    padding-right:5%;
+}
+.logo{
+    width: 135px;
+    height: 105px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.navigation{
+    background: none;
+    color: none;
+    margin-left: 160px;
+    border: none;
+    margin-top: 10px;
+}
+nav ul li:hover{
+  	display: inline-block;
+  	color: white;
+  	font-size: 15px;
+  	font-family: serif;
+  	font-weight: bold;
+    background-size: cover;
+    text-decoration: none;
+}
