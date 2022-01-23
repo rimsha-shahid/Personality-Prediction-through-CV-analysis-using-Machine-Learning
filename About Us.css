@@ -1,0 +1,56 @@
+﻿@import url('About Us.css');
+.content h1{
+	font-size: 40px;
+	font-weight: 100;
+	margin-top: 40px;
+	margin-bottom: 15px;
+}
+.content p, ul {
+	font-size: 17px;
+	color: #6a7199;
+	text-align: justify;
+}
+.content{
+	margin-left: 10%;
+	width: 42%;
+	margin-top: 50px;
+	font-family: serif;
+}
+.why{
+	height: 376px;
+	position:absolute;
+	width: 477px;
+	float: left;
+	top: 150px;
+	left: 770px;
+}
+.introduction
+{
+	padding: 20px;
+	margin-left: 640px;
+	text-align: justify;
+	width: 500px;
+	margin-top: 150px;
+}
+.introduction img{
+	height: 400px;
+	position:absolute;
+	width: 394px;
+	float: left;
+	top: 550px;
+	left: 193px;
+}
+.introduction h1
+{
+	font-size: 40px;
+	font-weight: 100;
+	margin-top: 40px;
+	margin-bottom: 15px;
+}
+
+.introduction p
+{
+	 font-size: 17px;
+	color: #6a7199;
+	text-align: justify;
+}

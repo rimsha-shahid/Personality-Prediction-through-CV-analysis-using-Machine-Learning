@@ -1,0 +1,29 @@
+﻿.question{
+    font-size: 40px;
+    font-weight: 100;
+    margin-top: 60px;
+    margin-bottom: 15px;
+    color: #232d60;
+}
+table{
+   margin-left: 200px;
+   margin-bottom: 60px;
+}
+.contact{
+    
+}
+.team{
+    width: 160px;
+    height: 170px;
+    margin-left: 120px;
+    margin-top: 20px;
+}
+table h1{
+    font-size: 22px;
+    font-weight: 100;
+    color: #232d60;
+}
+table p{
+    font-size: 17px;
+    color: #6a7199;
+}
