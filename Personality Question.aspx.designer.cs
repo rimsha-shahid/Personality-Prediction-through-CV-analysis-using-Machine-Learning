@@ -13,13 +13,13 @@ namespace Personality_Prediction {
     public partial class Personality_Question {
         
         /// <summary>
-        /// form1 control.
+        /// form2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form2;
         
         /// <summary>
         /// ques control.
@@ -46,16 +46,16 @@ namespace Personality_Prediction {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList opt1;
+        protected global::System.Web.UI.WebControls.TextBox opt1;
         
         /// <summary>
-        /// dropdown1 control.
+        /// option1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator dropdown1;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator option1;
         
         /// <summary>
         /// opt2 control.
@@ -64,16 +64,16 @@ namespace Personality_Prediction {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList opt2;
+        protected global::System.Web.UI.WebControls.TextBox opt2;
         
         /// <summary>
-        /// dropdown2 control.
+        /// option2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator dropdown2;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator option2;
         
         /// <summary>
         /// opt3 control.
@@ -82,16 +82,16 @@ namespace Personality_Prediction {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList opt3;
+        protected global::System.Web.UI.WebControls.TextBox opt3;
         
         /// <summary>
-        /// dropdown3 control.
+        /// option3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator dropdown3;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator option3;
         
         /// <summary>
         /// opt4 control.
@@ -100,25 +100,52 @@ namespace Personality_Prediction {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList opt4;
+        protected global::System.Web.UI.WebControls.TextBox opt4;
         
         /// <summary>
-        /// dropdown4 control.
+        /// option4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator dropdown4;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator option4;
         
         /// <summary>
-        /// SaveData control.
+        /// opt5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button SaveData;
+        protected global::System.Web.UI.WebControls.TextBox opt5;
+        
+        /// <summary>
+        /// opyion5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator opyion5;
+        
+        /// <summary>
+        /// correctans control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox correctans;
+        
+        /// <summary>
+        /// SaveDataPQ control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button SaveDataPQ;
         
         /// <summary>
         /// errormsg control.

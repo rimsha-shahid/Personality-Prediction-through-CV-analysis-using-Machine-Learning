@@ -43,6 +43,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -76,6 +84,8 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -95,7 +105,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\Admin Login.aspx" />
+    <Content Include="Admin\Adminlist.aspx" />
+    <Content Include="Admin\AdminLogin.aspx" />
+    <Content Include="Admin\AdminLogout.aspx" />
+    <Content Include="Admin\CustomerList.aspx" />
+    <Content Include="Admin\CustomerLogin.aspx" />
+    <Content Include="Admin\CustomerRegistration.aspx" />
     <Content Include="Apptitude Question.aspx" />
+    <Content Include="ApptitudeQuestionsList.aspx" />
+    <Content Include="Images\FormsBg.jpg" />
+    <Content Include="Images\loginimg.png" />
     <Content Include="Job Details\Add Job Details.aspx" />
     <Content Include="Job Details\Preferred CV.aspx" />
     <Content Include="Job Details\Requirements Details.aspx" />
@@ -107,13 +126,24 @@
     <Content Include="Images\personality.jpg" />
     <Content Include="Images\Team work.png" />
     <Content Include="Images\why we need.png" />
+    <Content Include="Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.cs</LastGenOutput>
+    </Content>
     <Content Include="Personality Question.aspx" />
+    <Content Include="PersonalityQuestionsList.aspx" />
     <Content Include="User Home Page\About Us.aspx" />
     <Content Include="User Home Page\About Us.css" />
     <Content Include="User Home Page\Contact Us.aspx" />
     <Content Include="User Home Page\Contact Us.css" />
     <Content Include="User Home Page\Login.aspx" />
-    <Content Include="User Home Page\Registration.aspx" />
+    <Content Include="Admin\Registration.aspx" />
     <Content Include="User Home Page\U.Apptitude Question.aspx" />
     <Content Include="User Home Page\U.Personality Questions.aspx" />
     <Content Include="User Home Page\U.Result.aspx" />
@@ -130,12 +160,21 @@
     </Content>
     <Content Include="Master Page\Master Page.Master" />
     <Content Include="Master Page for Home Page\Master Home.Master" />
+    <Content Include="UserDisplayApptitudeQuestion.aspx" />
+    <Content Include="UserDisplayPersonalityQuestion.aspx" />
     <Content Include="view Details\Job Deetails.aspx" />
     <Content Include="view Details\Job Details.css" />
     <Content Include="view Details\View Aptitude Questions.aspx" />
     <Content Include="view Details\View Aptitude Questions.css" />
     <Content Include="view Details\View Personality Questions.aspx" />
     <Content Include="view Details\View Personality Questions.css" />
+    <EntityDeploy Include="Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -157,6 +196,15 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminLoginData_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLogin_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminRegTbl.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Admin Login.aspx.cs">
       <DependentUpon>Admin Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -164,12 +212,100 @@
     <Compile Include="Admin\Admin Login.aspx.designer.cs">
       <DependentUpon>Admin Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Adminlist.aspx.cs">
+      <DependentUpon>Adminlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Adminlist.aspx.designer.cs">
+      <DependentUpon>Adminlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminLogin.aspx.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminLogin.aspx.designer.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminLogout.aspx.cs">
+      <DependentUpon>AdminLogout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminLogout.aspx.designer.cs">
+      <DependentUpon>AdminLogout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CustomerList.aspx.cs">
+      <DependentUpon>CustomerList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CustomerList.aspx.designer.cs">
+      <DependentUpon>CustomerList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CustomerLogin.aspx.cs">
+      <DependentUpon>CustomerLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CustomerLogin.aspx.designer.cs">
+      <DependentUpon>CustomerLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CustomerRegistration.aspx.cs">
+      <DependentUpon>CustomerRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CustomerRegistration.aspx.designer.cs">
+      <DependentUpon>CustomerRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Answertbl.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Apptitude Question.aspx.cs">
       <DependentUpon>Apptitude Question.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Apptitude Question.aspx.designer.cs">
       <DependentUpon>Apptitude Question.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApptitudeQuestionList_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApptitudeQuestionsList.aspx.cs">
+      <DependentUpon>ApptitudeQuestionsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApptitudeQuestionsList.aspx.designer.cs">
+      <DependentUpon>ApptitudeQuestionsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApptitudeQuestiontbl.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="comparevaluetbl.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerList_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerLogin_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustRegTbl.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DeletePersonalityQuestion_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAdminList_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAQData_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCustomerEmail_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetEmmail_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetPQData_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Job Details\Add Job Details.aspx.cs">
       <DependentUpon>Add Job Details.aspx</DependentUpon>
@@ -202,12 +338,46 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="LoginAdmin_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Personality Question.aspx.cs">
       <DependentUpon>Personality Question.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Personality Question.aspx.designer.cs">
       <DependentUpon>Personality Question.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalityQuestionList_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalityQuestionsList.aspx.cs">
+      <DependentUpon>PersonalityQuestionsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PersonalityQuestionsList.aspx.designer.cs">
+      <DependentUpon>PersonalityQuestionsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalityQuestionTbl.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="submittedanswertbl.cs">
+      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="User Home Page\About Us.aspx.cs">
       <DependentUpon>About Us.aspx</DependentUpon>
@@ -230,11 +400,11 @@
     <Compile Include="User Home Page\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User Home Page\Registration.aspx.cs">
+    <Compile Include="Admin\Registration.aspx.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="User Home Page\Registration.aspx.designer.cs">
+    <Compile Include="Admin\Registration.aspx.designer.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
     </Compile>
     <Compile Include="User Home Page\U.Apptitude Question.aspx.cs">
@@ -280,6 +450,23 @@
       <DependentUpon>Master Page.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserDisplayApptitudeQuestion.aspx.cs">
+      <DependentUpon>UserDisplayApptitudeQuestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserDisplayApptitudeQuestion.aspx.designer.cs">
+      <DependentUpon>UserDisplayApptitudeQuestion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserDisplayPersonalityQuestion.aspx.cs">
+      <DependentUpon>UserDisplayPersonalityQuestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserDisplayPersonalityQuestion.aspx.designer.cs">
+      <DependentUpon>UserDisplayPersonalityQuestion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPQAnswerTbl.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="view Details\Job Deetails.aspx.cs">
       <DependentUpon>Job Deetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -305,6 +492,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
