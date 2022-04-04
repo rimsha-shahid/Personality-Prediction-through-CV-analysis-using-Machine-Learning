@@ -34,7 +34,13 @@ This system requires large memory space as it stores data linked to CV’s. This
 3. Dowwnload the zip file of this project by clicking on code.
 4. Extract the zip file.
 5. Open the [personality prediction.sln] in visual studio.
-6. Open the DB.bak file by using MS SQL server.
-7. Now you can modify this project.
+6. Open the DB.bak file by using MS SQL server.(Use the following step below on how to open .bak file?)
+8. Now you can modify this project.
 
-
+### How to open .bak file?
+ 1. Open SSMS (SQL Server Management Studio), right-click on the database where you want to restore the .bak data to and select "Tasks" > "Restore" > "Database".
+ 2. Click the three dots button next to the "From device" section, browse to choose the .bak file saved on your local drive.
+ 3.  Click "Add" to specify the exact location where you saved the .bak file, select it and click "OK" to confirm
+ 4.  Tick "Full Database Backup" and "Transaction Log Backup", click "OK" to confirm.
+ 5.  When the restore process completes, click "OK" to finish.
+ Note: If the .bak file contains the backup of your SQL database, the whole process also works to restore your corrupted SQL Server database from backup.
