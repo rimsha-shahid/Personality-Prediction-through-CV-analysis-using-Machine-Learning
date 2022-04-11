@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PersonalityPredictionModelStoreContainer" CdmEntityContainer="PersonalityPredictionEntities">
+    <EntitySetMapping Name="AdminRegTbls">
+      <EntityTypeMapping TypeName="PersonalityPredictionModel.AdminRegTbl">
+        <MappingFragment StoreEntitySet="AdminRegTbl">
+          <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+          <ScalarProperty Name="AdminName" ColumnName="AdminName" />
+          <ScalarProperty Name="AdminPassword" ColumnName="AdminPassword" />
+          <ScalarProperty Name="AdminEmail" ColumnName="AdminEmail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetEmmail" FunctionName="PersonalityPredictionModel.Store.GetEmmail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PersonalityPredictionModel.GetEmmail_Result">
+          <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+          <ScalarProperty Name="AdminName" ColumnName="AdminName" />
+          <ScalarProperty Name="AdminPassword" ColumnName="AdminPassword" />
+          <ScalarProperty Name="AdminEmail" ColumnName="AdminEmail" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAdminList" FunctionName="PersonalityPredictionModel.Store.GetAdminList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PersonalityPredictionModel.GetAdminList_Result">
+          <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+          <ScalarProperty Name="AdminName" ColumnName="AdminName" />
+          <ScalarProperty Name="AdminPassword" ColumnName="AdminPassword" />
+          <ScalarProperty Name="AdminEmail" ColumnName="AdminEmail" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DeleteAdmin" FunctionName="PersonalityPredictionModel.Store.DeleteAdmin" />
+    <FunctionImportMapping FunctionImportName="AdminLoginData" FunctionName="PersonalityPredictionModel.Store.AdminLoginData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PersonalityPredictionModel.AdminLoginData_Result">
+          <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+          <ScalarProperty Name="AdminName" ColumnName="AdminName" />
+          <ScalarProperty Name="AdminPassword" ColumnName="AdminPassword" />
+          <ScalarProperty Name="AdminEmail" ColumnName="AdminEmail" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="CustRegTbls">
+      <EntityTypeMapping TypeName="PersonalityPredictionModel.CustRegTbl">
+        <MappingFragment StoreEntitySet="CustRegTbl">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="CustomerList" FunctionName="PersonalityPredictionModel.Store.CustomerList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PersonalityPredictionModel.CustomerList_Result">
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="CustomerLogin" FunctionName="PersonalityPredictionModel.Store.CustomerLogin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PersonalityPredictionModel.CustomerLogin_Result">
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DeleteCustomers" FunctionName="PersonalityPredictionModel.Store.DeleteCustomers" />
+    <FunctionImportMapping FunctionImportName="GetCustomerEmail" FunctionName="PersonalityPredictionModel.Store.GetCustomerEmail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PersonalityPredictionModel.GetCustomerEmail_Result">
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="LoginAdmin" FunctionName="PersonalityPredictionModel.Store.LoginAdmin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PersonalityPredictionModel.LoginAdmin_Result">
+          <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+          <ScalarProperty Name="AdminName" ColumnName="AdminName" />
+          <ScalarProperty Name="AdminPassword" ColumnName="AdminPassword" />
+          <ScalarProperty Name="AdminEmail" ColumnName="AdminEmail" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="PersonalityQuestionTbls">
+      <EntityTypeMapping TypeName="PersonalityPredictionModel.PersonalityQuestionTbl">
+        <MappingFragment StoreEntitySet="PersonalityQuestionTbl">
+          <ScalarProperty Name="UserAnswer" ColumnName="UserAnswer" />
+          <ScalarProperty Name="CorrectAnswer" ColumnName="CorrectAnswer" />
+          <ScalarProperty Name="Option5" ColumnName="Option5" />
+          <ScalarProperty Name="Option4" ColumnName="Option4" />
+          <ScalarProperty Name="Option3" ColumnName="Option3" />
+          <ScalarProperty Name="Option2" ColumnName="Option2" />
+          <ScalarProperty Name="Option1" ColumnName="Option1" />
+          <ScalarProperty Name="Question" ColumnName="Question" />
+          <ScalarProperty Name="PersonalityQuestionID" ColumnName="PersonalityQuestionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="PersonalityQuestionList" FunctionName="PersonalityPredictionModel.Store.PersonalityQuestionList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PersonalityPredictionModel.PersonalityQuestionList_Result">
+          <ScalarProperty Name="PersonalityQuestionID" ColumnName="PersonalityQuestionID" />
+          <ScalarProperty Name="Question" ColumnName="Question" />
+          <ScalarProperty Name="Option1" ColumnName="Option1" />
+          <ScalarProperty Name="Option2" ColumnName="Option2" />
+          <ScalarProperty Name="Option3" ColumnName="Option3" />
+          <ScalarProperty Name="Option4" ColumnName="Option4" />
+          <ScalarProperty Name="Option5" ColumnName="Option5" />
+          <ScalarProperty Name="CorrectAnswer" ColumnName="CorrectAnswer" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetPQData" FunctionName="PersonalityPredictionModel.Store.GetPQData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PersonalityPredictionModel.GetPQData_Result">
+          <ScalarProperty Name="PersonalityQuestionID" ColumnName="PersonalityQuestionID" />
+          <ScalarProperty Name="Question" ColumnName="Question" />
+          <ScalarProperty Name="Option1" ColumnName="Option1" />
+          <ScalarProperty Name="Option2" ColumnName="Option2" />
+          <ScalarProperty Name="Option3" ColumnName="Option3" />
+          <ScalarProperty Name="Option4" ColumnName="Option4" />
+          <ScalarProperty Name="Option5" ColumnName="Option5" />
+          <ScalarProperty Name="CorrectAnswer" ColumnName="CorrectAnswer" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="UserPQAnswerTbls">
+      <EntityTypeMapping TypeName="PersonalityPredictionModel.UserPQAnswerTbl">
+        <MappingFragment StoreEntitySet="UserPQAnswerTbl">
+          <ScalarProperty Name="Option5" ColumnName="Option5" />
+          <ScalarProperty Name="Option4" ColumnName="Option4" />
+          <ScalarProperty Name="Option3" ColumnName="Option3" />
+          <ScalarProperty Name="Option2" ColumnName="Option2" />
+          <ScalarProperty Name="Option1" ColumnName="Option1" />
+          <ScalarProperty Name="PersonalityQuestionID" ColumnName="PersonalityQuestionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ApptitudeQuestiontbls">
+      <EntityTypeMapping TypeName="PersonalityPredictionModel.ApptitudeQuestiontbl">
+        <MappingFragment StoreEntitySet="ApptitudeQuestiontbl">
+          <ScalarProperty Name="SelectedAnswer" ColumnName="SelectedAnswer" />
+          <ScalarProperty Name="CorrectAnswer" ColumnName="CorrectAnswer" />
+          <ScalarProperty Name="Option4" ColumnName="Option4" />
+          <ScalarProperty Name="Option3" ColumnName="Option3" />
+          <ScalarProperty Name="Option2" ColumnName="Option2" />
+          <ScalarProperty Name="Option1" ColumnName="Option1" />
+          <ScalarProperty Name="Question" ColumnName="Question" />
+          <ScalarProperty Name="ApptitudeQuestionID" ColumnName="ApptitudeQuestionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="ApptitudeQuestionList" FunctionName="PersonalityPredictionModel.Store.ApptitudeQuestionList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PersonalityPredictionModel.ApptitudeQuestionList_Result">
+          <ScalarProperty Name="ApptitudeQuestionID" ColumnName="ApptitudeQuestionID" />
+          <ScalarProperty Name="Question" ColumnName="Question" />
+          <ScalarProperty Name="Option1" ColumnName="Option1" />
+          <ScalarProperty Name="Option2" ColumnName="Option2" />
+          <ScalarProperty Name="Option3" ColumnName="Option3" />
+          <ScalarProperty Name="Option4" ColumnName="Option4" />
+          <ScalarProperty Name="CorrectAnswer" ColumnName="CorrectAnswer" />
+          <ScalarProperty Name="SelectedAnswer" ColumnName="SelectedAnswer" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DeleteAQ" FunctionName="PersonalityPredictionModel.Store.DeleteAQ" />
+    <FunctionImportMapping FunctionImportName="DeletePQ" FunctionName="PersonalityPredictionModel.Store.DeletePQ" />
+    <FunctionImportMapping FunctionImportName="GetAQData" FunctionName="PersonalityPredictionModel.Store.GetAQData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PersonalityPredictionModel.GetAQData_Result">
+          <ScalarProperty Name="ApptitudeQuestionID" ColumnName="ApptitudeQuestionID" />
+          <ScalarProperty Name="Question" ColumnName="Question" />
+          <ScalarProperty Name="Option1" ColumnName="Option1" />
+          <ScalarProperty Name="Option2" ColumnName="Option2" />
+          <ScalarProperty Name="Option3" ColumnName="Option3" />
+          <ScalarProperty Name="Option4" ColumnName="Option4" />
+          <ScalarProperty Name="CorrectAnswer" ColumnName="CorrectAnswer" />
+          <ScalarProperty Name="SelectedAnswer" ColumnName="SelectedAnswer" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Answertbls">
+      <EntityTypeMapping TypeName="PersonalityPredictionModel.Answertbl">
+        <MappingFragment StoreEntitySet="Answertbl">
+          <ScalarProperty Name="answer" ColumnName="answer" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="comparevaluetbls">
+      <EntityTypeMapping TypeName="PersonalityPredictionModel.comparevaluetbl">
+        <MappingFragment StoreEntitySet="comparevaluetbl">
+          <ScalarProperty Name="CompareValue" ColumnName="CompareValue" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="submittedanswertbls">
+      <EntityTypeMapping TypeName="PersonalityPredictionModel.submittedanswertbl">
+        <MappingFragment StoreEntitySet="submittedanswertbl">
+          <ScalarProperty Name="SubmittedAnswer" ColumnName="SubmittedAnswer" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="InsertData" FunctionName="PersonalityPredictionModel.Store.InsertData" />
+    <EntitySetMapping Name="userApptitudeAnswers">
+      <EntityTypeMapping TypeName="PersonalityPredictionModel.userApptitudeAnswer">
+        <MappingFragment StoreEntitySet="userApptitudeAnswer">
+          <ScalarProperty Name="Option4" ColumnName="Option4" />
+          <ScalarProperty Name="Option3" ColumnName="Option3" />
+          <ScalarProperty Name="Option2" ColumnName="Option2" />
+          <ScalarProperty Name="Option1" ColumnName="Option1" />
+          <ScalarProperty Name="UserAQid" ColumnName="UserAQid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

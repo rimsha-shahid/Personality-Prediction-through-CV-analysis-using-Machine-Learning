@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PersonalityPredictionModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AdminRegTbl">
+    <Key>
+      <PropertyRef Name="AdminID" />
+    </Key>
+    <Property Name="AdminID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AdminName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="AdminPassword" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="AdminEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="PersonalityPredictionEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AdminRegTbls" EntityType="Self.AdminRegTbl" />
+    <FunctionImport Name="AdminLogin" ReturnType="Collection(PersonalityPredictionModel.AdminLogin_Result)">
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="Password" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetEmmail" ReturnType="Collection(PersonalityPredictionModel.GetEmmail_Result)">
+      <Parameter Name="email" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetAdminList" ReturnType="Collection(PersonalityPredictionModel.GetAdminList_Result)" />
+    <FunctionImport Name="DeleteAdmin">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="AdminLoginData" ReturnType="Collection(PersonalityPredictionModel.AdminLoginData_Result)">
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="password" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="CustRegTbls" EntityType="PersonalityPredictionModel.CustRegTbl" />
+    <FunctionImport Name="CustomerList" ReturnType="Collection(PersonalityPredictionModel.CustomerList_Result)" />
+    <FunctionImport Name="CustomerLogin" ReturnType="Collection(PersonalityPredictionModel.CustomerLogin_Result)">
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="password" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteCustomers">
+      <Parameter Name="cid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetCustomerEmail" ReturnType="Collection(PersonalityPredictionModel.GetCustomerEmail_Result)">
+      <Parameter Name="email" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="LoginAdmin" ReturnType="Collection(PersonalityPredictionModel.LoginAdmin_Result)">
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="Password" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="PersonalityQuestionTbls" EntityType="PersonalityPredictionModel.PersonalityQuestionTbl" />
+    <FunctionImport Name="DeletePersonalityQuestion" ReturnType="Collection(PersonalityPredictionModel.DeletePersonalityQuestion_Result)">
+      <Parameter Name="pqid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="PersonalityQuestionList" ReturnType="Collection(PersonalityPredictionModel.PersonalityQuestionList_Result)" />
+    <FunctionImport Name="GetPQData" ReturnType="Collection(PersonalityPredictionModel.GetPQData_Result)" />
+    <EntitySet Name="UserPQAnswerTbls" EntityType="PersonalityPredictionModel.UserPQAnswerTbl" />
+    <EntitySet Name="ApptitudeQuestiontbls" EntityType="PersonalityPredictionModel.ApptitudeQuestiontbl" />
+    <FunctionImport Name="ApptitudeQuestionList" ReturnType="Collection(PersonalityPredictionModel.ApptitudeQuestionList_Result)" />
+    <FunctionImport Name="DeleteAQ">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeletePQ">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetAQData" ReturnType="Collection(PersonalityPredictionModel.GetAQData_Result)" />
+    <EntitySet Name="Answertbls" EntityType="PersonalityPredictionModel.Answertbl" />
+    <EntitySet Name="comparevaluetbls" EntityType="PersonalityPredictionModel.comparevaluetbl" />
+    <EntitySet Name="submittedanswertbls" EntityType="PersonalityPredictionModel.submittedanswertbl" />
+    <FunctionImport Name="InsertData">
+      <Parameter Name="subans" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="userApptitudeAnswers" EntityType="PersonalityPredictionModel.userApptitudeAnswer" />
+  </EntityContainer>
+  <ComplexType Name="AdminLogin_Result">
+    <Property Type="Int32" Name="AdminID" Nullable="false" />
+    <Property Type="String" Name="AdminName" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="AdminPassword" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="AdminEmail" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GetEmmail_Result">
+    <Property Type="Int32" Name="AdminID" Nullable="false" />
+    <Property Type="String" Name="AdminName" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="AdminPassword" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="AdminEmail" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GetAdminList_Result">
+    <Property Type="Int32" Name="AdminID" Nullable="false" />
+    <Property Type="String" Name="AdminName" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="AdminPassword" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="AdminEmail" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="AdminLoginData_Result">
+    <Property Type="Int32" Name="AdminID" Nullable="false" />
+    <Property Type="String" Name="AdminName" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="AdminPassword" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="AdminEmail" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <EntityType Name="CustRegTbl">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="CustomerList_Result">
+    <Property Type="Int32" Name="CustomerID" Nullable="false" />
+    <Property Type="String" Name="FirstName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LastName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Password" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="CustomerLogin_Result">
+    <Property Type="Int32" Name="CustomerID" Nullable="false" />
+    <Property Type="String" Name="FirstName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LastName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Password" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GetCustomerEmail_Result">
+    <Property Type="Int32" Name="CustomerID" Nullable="false" />
+    <Property Type="String" Name="FirstName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LastName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Password" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="LoginAdmin_Result">
+    <Property Type="Int32" Name="AdminID" Nullable="false" />
+    <Property Type="String" Name="AdminName" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="AdminPassword" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="AdminEmail" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <EntityType Name="PersonalityQuestionTbl">
+    <Key>
+      <PropertyRef Name="PersonalityQuestionID" />
+    </Key>
+    <Property Name="PersonalityQuestionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Question" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Option1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Option2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Option3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Option4" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Option5" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CorrectAnswer" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="UserAnswer" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <ComplexType Name="DeletePersonalityQuestion_Result">
+    <Property Type="Int32" Name="PersonalityQuestionID" Nullable="false" />
+    <Property Type="String" Name="Question" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Option1" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Option2" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Option3" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Option4" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Option5" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CorrectAnswer" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="PersonalityQuestionList_Result">
+    <Property Type="Int32" Name="PersonalityQuestionID" Nullable="false" />
+    <Property Type="String" Name="Question" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Option1" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Option2" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Option3" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Option4" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Option5" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CorrectAnswer" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="GetPQData_Result">
+    <Property Type="Int32" Name="PersonalityQuestionID" Nullable="false" />
+    <Property Type="String" Name="Question" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Option1" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Option2" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Option3" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Option4" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Option5" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CorrectAnswer" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <EntityType Name="UserPQAnswerTbl">
+    <Key>
+      <PropertyRef Name="PersonalityQuestionID" />
+    </Key>
+    <Property Name="PersonalityQuestionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Option1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Option2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Option3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Option4" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Option5" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ApptitudeQuestiontbl">
+    <Key>
+      <PropertyRef Name="ApptitudeQuestionID" />
+    </Key>
+    <Property Name="ApptitudeQuestionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Question" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Option1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Option2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Option3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Option4" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CorrectAnswer" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SelectedAnswer" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <ComplexType Name="ApptitudeQuestionList_Result">
+    <Property Type="Int32" Name="ApptitudeQuestionID" Nullable="false" />
+    <Property Type="String" Name="Question" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Option1" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Option2" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Option3" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Option4" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CorrectAnswer" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="SelectedAnswer" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="GetAQData_Result">
+    <Property Type="Int32" Name="ApptitudeQuestionID" Nullable="false" />
+    <Property Type="String" Name="Question" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Option1" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Option2" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Option3" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Option4" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CorrectAnswer" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="SelectedAnswer" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <EntityType Name="Answertbl">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="answer" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="comparevaluetbl">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompareValue" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="submittedanswertbl">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SubmittedAnswer" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="userApptitudeAnswer">
+    <Key>
+      <PropertyRef Name="UserAQid" />
+    </Key>
+    <Property Name="UserAQid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Option1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Option2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Option3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Option4" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

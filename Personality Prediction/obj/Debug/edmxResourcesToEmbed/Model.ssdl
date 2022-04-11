@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PersonalityPredictionModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AdminRegTbl">
+    <Key>
+      <PropertyRef Name="AdminID" />
+    </Key>
+    <Property Name="AdminID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AdminName" Type="varchar" MaxLength="25" />
+    <Property Name="AdminPassword" Type="varchar" MaxLength="150" />
+    <Property Name="AdminEmail" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Answertbl">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="answer" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ApptitudeQuestiontbl">
+    <Key>
+      <PropertyRef Name="ApptitudeQuestionID" />
+    </Key>
+    <Property Name="ApptitudeQuestionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Question" Type="nvarchar" MaxLength="150" />
+    <Property Name="Option1" Type="nvarchar" MaxLength="100" />
+    <Property Name="Option2" Type="nvarchar" MaxLength="100" />
+    <Property Name="Option3" Type="nvarchar" MaxLength="100" />
+    <Property Name="Option4" Type="nvarchar" MaxLength="100" />
+    <Property Name="CorrectAnswer" Type="nvarchar" MaxLength="100" />
+    <Property Name="SelectedAnswer" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="comparevaluetbl">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompareValue" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="CustRegTbl">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="150" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PersonalityQuestionTbl">
+    <Key>
+      <PropertyRef Name="PersonalityQuestionID" />
+    </Key>
+    <Property Name="PersonalityQuestionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Question" Type="nvarchar" MaxLength="150" />
+    <Property Name="Option1" Type="nvarchar" MaxLength="100" />
+    <Property Name="Option2" Type="nvarchar" MaxLength="100" />
+    <Property Name="Option3" Type="nvarchar" MaxLength="100" />
+    <Property Name="Option4" Type="nvarchar" MaxLength="100" />
+    <Property Name="Option5" Type="nvarchar" MaxLength="100" />
+    <Property Name="CorrectAnswer" Type="nvarchar" MaxLength="100" />
+    <Property Name="UserAnswer" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="submittedanswertbl">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubmittedAnswer" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'PersonalityPrediction.dbo.userApptitudeAnswer' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="userApptitudeAnswer">
+    <Key>
+      <PropertyRef Name="UserAQid" />
+    </Key>
+    <Property Name="UserAQid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Option1" Type="varchar" MaxLength="100" />
+    <Property Name="Option2" Type="varchar" MaxLength="100" />
+    <Property Name="Option3" Type="varchar" MaxLength="100" />
+    <Property Name="Option4" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="UserPQAnswerTbl">
+    <Key>
+      <PropertyRef Name="PersonalityQuestionID" />
+    </Key>
+    <Property Name="PersonalityQuestionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Option1" Type="nvarchar" MaxLength="100" />
+    <Property Name="Option2" Type="nvarchar" MaxLength="100" />
+    <Property Name="Option3" Type="nvarchar" MaxLength="100" />
+    <Property Name="Option4" Type="nvarchar" MaxLength="100" />
+    <Property Name="Option5" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <Function Name="AdminLoginData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="email" Type="varchar" Mode="In" />
+    <Parameter Name="password" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="ApptitudeQuestionList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="CustomerList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="CustomerLogin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="email" Type="varchar" Mode="In" />
+    <Parameter Name="password" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="DeleteAdmin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteAQ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteCustomers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeletePQ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetAdminList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetAQData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetCustomerEmail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="email" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetEmmail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="email" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetPQData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="InsertData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="subans" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="LoginAdmin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+    <Parameter Name="Password" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="PersonalityQuestionList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="PersonalityPredictionModelStoreContainer">
+    <EntitySet Name="AdminRegTbl" EntityType="Self.AdminRegTbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Answertbl" EntityType="Self.Answertbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ApptitudeQuestiontbl" EntityType="Self.ApptitudeQuestiontbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="comparevaluetbl" EntityType="Self.comparevaluetbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustRegTbl" EntityType="Self.CustRegTbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PersonalityQuestionTbl" EntityType="Self.PersonalityQuestionTbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="submittedanswertbl" EntityType="Self.submittedanswertbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserPQAnswerTbl" EntityType="Self.UserPQAnswerTbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="userApptitudeAnswer" EntityType="Self.userApptitudeAnswer" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [userApptitudeAnswer].[UserAQid] AS [UserAQid], 
+    [userApptitudeAnswer].[Option1] AS [Option1], 
+    [userApptitudeAnswer].[Option2] AS [Option2], 
+    [userApptitudeAnswer].[Option3] AS [Option3], 
+    [userApptitudeAnswer].[Option4] AS [Option4]
+    FROM [dbo].[userApptitudeAnswer] AS [userApptitudeAnswer]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

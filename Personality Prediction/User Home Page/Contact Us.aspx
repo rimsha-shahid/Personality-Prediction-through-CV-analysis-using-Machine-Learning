@@ -10,7 +10,7 @@
 
     
     <!-- heading -->
-    <center> <h1 class="question"> Any question? Contact us.. </h1> </center>
+   <h1 class="question"> Any question? Contact us.. </h1> </center>
 
    <!-- main table-->
 

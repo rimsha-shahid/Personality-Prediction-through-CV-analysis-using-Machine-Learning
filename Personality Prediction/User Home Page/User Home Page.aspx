@@ -14,8 +14,8 @@
     <!--content-->
     <div class="content" runat="server" >
 
-        <!-- Registration button-->
-        <button class="btn" href="#" runat="server">Register yourelf</button>
+        <!-- Registration-->
+       <a href="../User%20Home%20Page/Registration.aspx">Register</a>
 
         <!-- heading-->
         <h1> You should always feel comfortable</h1>
@@ -61,7 +61,7 @@
         
         <!-- Click me button-->
         <tr>
-        <td> <a href="#">Click Me</a> </td>
+        <td> <a href="../User%20Home%20Page/Registration.aspx">Click Me</a> </td>
         <td> <a  href="#">Click Me</a> </td>
         <td> <a href="#">Click Me</a> </td>
             </tr>

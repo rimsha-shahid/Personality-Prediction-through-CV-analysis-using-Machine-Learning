@@ -16,11 +16,7 @@
         <!--why we need paragraph-->
         <p>
            The process of matching job seeker to vacancies is a difficult endeavor due to
-            <ul>
-                <li> Lack of sufficient information of job seekers </li>
-                <li> Difficulty of the matching process </li>
-                <li> Lack of sufficient information of vacancies </li>
-            </ul>
+       
            Available information about job seekers is often limited to their 
            Curriculum Vitae (CV) and/or cover letter.
             </p>
