@@ -11,7 +11,7 @@ namespace Personality_Prediction.Admin.Job_Details
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            this.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
         }
     }
 }

@@ -34,6 +34,16 @@
           <!--Home-->
       <li><a href="../User%20Home%20Page/User%20Home%20Page.aspx">Home</a></li>
 
+        <!--Test-->
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Test</a>
+		<ul class="dropdown-menu">
+		  <li><a href="http://localhost:64014/User%20Home%20Page/U.Apptitude%20Question.aspx">Apptitude Question</a></li>
+		  <li><a href="http://localhost:64014/User%20Home%20Page/U.Personality%20Questions.aspx">Personality Questions</a></li>
+		  <li><a href="http://localhost:64014/User%20Home%20Page/U.Result.aspx">Result</a></li>
+		  
+		  </ul>
+	  </li>
+
          <!--About Us-->
       <li><a href="../User%20Home%20Page/About%20Us.aspx">About Us</a></li>
 

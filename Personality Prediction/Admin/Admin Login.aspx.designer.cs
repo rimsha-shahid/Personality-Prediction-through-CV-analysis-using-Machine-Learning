@@ -22,75 +22,75 @@ namespace Personality_Prediction.Admin {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Label3 control.
+        /// email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Label3;
+        protected global::System.Web.UI.WebControls.TextBox email;
         
         /// <summary>
-        /// txt_Email control.
+        /// r_email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txt_Email;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator r_email;
         
         /// <summary>
-        /// aemail control.
+        /// emailexp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator aemail;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator emailexp;
         
         /// <summary>
-        /// Label4 control.
+        /// password control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Label4;
+        protected global::System.Web.UI.WebControls.TextBox password;
         
         /// <summary>
-        /// txtPassword control.
+        /// pass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputPassword txtPassword;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator pass;
         
         /// <summary>
-        /// apass control.
+        /// GetAdminData control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator apass;
+        protected global::System.Web.UI.WebControls.Button GetAdminData;
         
         /// <summary>
-        /// loginbtn control.
+        /// lblmsg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputButton loginbtn;
+        protected global::System.Web.UI.WebControls.Label lblmsg;
         
         /// <summary>
-        /// ValidationSummary1 control.
+        /// errormsg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
+        protected global::System.Web.UI.WebControls.ValidationSummary errormsg;
     }
 }

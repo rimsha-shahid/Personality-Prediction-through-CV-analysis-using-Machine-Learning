@@ -22,84 +22,75 @@ namespace Personality_Prediction.Admin.Job_Details {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Label1 control.
+        /// experiance control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Label1;
+        protected global::System.Web.UI.WebControls.TextBox experiance;
         
         /// <summary>
-        /// job_id control.
+        /// desig control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl job_id;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator desig;
         
         /// <summary>
-        /// Label2 control.
+        /// qualification control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Label2;
+        protected global::System.Web.UI.WebControls.TextBox qualification;
         
         /// <summary>
-        /// job_requirement control.
+        /// qualif control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText job_requirement;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator qualif;
         
         /// <summary>
-        /// Label3 control.
+        /// skill control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Label3;
+        protected global::System.Web.UI.WebControls.TextBox skill;
         
         /// <summary>
-        /// job_qualification control.
+        /// skills control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText job_qualification;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator skills;
         
         /// <summary>
-        /// Label4 control.
+        /// Save control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Label4;
+        protected global::System.Web.UI.WebControls.Button Save;
         
         /// <summary>
-        /// job_skill control.
+        /// errormsg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText job_skill;
-        
-        /// <summary>
-        /// loginbtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputButton loginbtn;
+        protected global::System.Web.UI.WebControls.ValidationSummary errormsg;
     }
 }

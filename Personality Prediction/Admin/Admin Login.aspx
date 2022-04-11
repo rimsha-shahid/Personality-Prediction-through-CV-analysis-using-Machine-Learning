@@ -1,100 +1,117 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master Page/Master Page.Master" AutoEventWireup="true" CodeBehind="Admin Login.aspx.cs" Inherits="Personality_Prediction.Admin.Admin_Login" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-	<style>
-		* {box-sizing: border-box}
-		
-		#login-box {
-			padding:20px;
-		  position: relative;
-		  margin: 5% auto;
-		  width: 50%;
-		  height: 100%;
-		  background: #FFF;
-		  border-radius: 2px;
-		  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-		 margin-top:20px
-		}
+﻿<%@ Page Title="" Language="C#"  AutoEventWireup="true" CodeBehind="Admin Login.aspx.cs" Inherits="Personality_Prediction.Admin.Admin_Login" %>
+<!DOCTYPE html>
 
-			input[type=password], input[type=email] {
- 
-			  padding: 15px;
-			  margin: 5px 0 22px 0;
-			  display: inline-block;
-			  border: none;
-			  width:100%;
-			  background: #f1f1f1;
-			}
-
-			input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
-			  background-color: #ddd;
-			  outline: none;
-			}
-
-			input[type=button] {
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link  rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
   
-			  color: white;
-			  font-size:larger;
-			  padding: 16px 20px;
-			  margin: 8px 0;
-			  border: none;
-			  cursor: pointer;
-			 width: 100%;
-			  opacity: 0.9;
-			}
+    <title>Personality Predictiont</title>
+    <style>
+        body {
+            background-image: url('../Images/FormsBg.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center center;
+    
+}
+        .container{
+    margin:auto;
+  padding-left:30px;
+  padding-right:30px;
+}
+        img{
+            margin-left:30%;
+            margin-top:10px;
+            height:150px;
+            width:150px;
+            border:black 2px solid;
+            border-radius: 25px;
+        }
+         a, b{
+            color:black;
+            
+        }
+     .form-control{
+         border-color:black;
+     }
+        #a1{
+            margin-top:20px;
+        }
+        #form{
+            margin:auto;
+            border-color:black;
+           width:400px;
+            box-shadow: 5px 10px 8px grey;
+             margin-top:85px;
+            border:2px solid black;
+            margin-bottom:80px;
+        }
+        .form-group{
+            margin-left:38px;
+        }
+       
+       
 
-			input[type=button]:hover {
-			  opacity:1;
-			}
-			a {
-			  color: dodgerblue;
-			}
+        .auto-style1 {
+            display: block;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: .25rem;
+            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+            margin-left: 27px;
+        }
+         h1{
+            text-align:center;
+            margin-top:20px;
+             color:black;
+          
+        }
+          label{
+            font-size:20px;
+        }
+         #email, #password, #GetData{
+             padding:2%;
+         }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="container h-100">
 
-
-			.signin {
-			  background-color: #f1f1f1;
-			  width:100%;
-			  text-align:center;
-			}
-
-  
-	   
-	</style>
-</asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-<form id="form1" runat="server"   >
-	  <div id="login-box">
-		<h1 style="text-align: center">Admin&nbsp;Login</h1>
-
-
-			<label id="Label3" runat="server"> Email: </label><br />
-			<input type="email" runat="server" id="txt_Email"/> <br /><br />
-			<asp:RequiredFieldValidator runat="server" ID="aemail" ControlToValidate="txt_Email" Text="*" ErrorMessage="Please Enter Your Name" ForeColor="Red"></asp:RequiredFieldValidator>
-
-
-			<label id="Label4" runat="server" > Password: </label><br />
-			<input type="password" runat="server" id="txtPassword"/><br /><br />
-			<asp:RequiredFieldValidator runat="server" ID="apass" ControlToValidate="txtPassword" Text="*" ErrorMessage="Please Enter Password" ForeColor="Red"></asp:RequiredFieldValidator>
-
-		   
-
-			<input type="button" runat="server" id="loginbtn" value="Login" style="background-color: #006699"  />
-
-			<div class="container signin" id="container-reg" style="width: 100%">
-			<asp:ValidationSummary runat="server" ID="ValidationSummary1" ForeColor="Red" />
-			</div>
-			
-		</div>
-	   
-		
-
-	 
-
-	</form>
-	
+    <div class="row h-100 justify-content-center align-items-center">
+          
+       <div id="form"  >
    
-  
+        <h1>Admin Login</h1>
+    <img src="../Images/loginimg.png" class="mx-auto d-block"  />
+        <div class="form-group">
+         <label id="a1"><b>Email</b></label><br />
+        <asp:TextBox runat="server" ID="email" placeholder="abc@gmail.com" CssClass="form-control " class="auto-style1"  Width="308px" style="margin-top:10px;"></asp:TextBox>
+       
+         <asp:RequiredFieldValidator runat="server" ID="r_email" ControlToValidate="email" Text="*" ErrorMessage="Please Enter Your Email" ForeColor="Red"></asp:RequiredFieldValidator>
+        <asp:RegularExpressionValidator runat="server" ID="emailexp" ControlToValidate="email" ErrorMessage="Invalid Email" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ForeColor="Red"> </asp:RegularExpressionValidator>
+              </div>
 
-  
+        <div class="form-group">
+         <label><b> Password</b></label><br />
+        <asp:TextBox runat="server" ID="password"  TextMode="Password" placeholder="........." CssClass="form-control " class="auto-style1"  Width="308px" style="margin-top:10px;"></asp:TextBox>
+             <asp:RequiredFieldValidator runat="server" ID="pass" ControlToValidate="password" Text="*" ErrorMessage="Please Enter Password" ForeColor="Red"></asp:RequiredFieldValidator>
+        <br /></div>
+            <asp:Button runat="server" ID="GetAdminData" Text="Login" CssClass="btn btn-secondary" OnClick="GetAdminData_Click"   style=" margin-left:38px;margin-bottom:20px; margin-top:10px;"  />
+   
+           <asp:label runat="server" ID="lblmsg"></asp:label>
+        <br />
+        <asp:ValidationSummary runat="server" ID="errormsg" ForeColor="Red" />
 
-</asp:Content>
+        </div>
+        </div>
+        </div>
+      </form>
+</body>
+</html>

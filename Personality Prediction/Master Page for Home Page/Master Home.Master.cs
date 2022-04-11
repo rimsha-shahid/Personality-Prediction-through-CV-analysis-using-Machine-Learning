@@ -11,7 +11,13 @@ namespace Personality_Prediction.Master_Page_for_Home_Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Request.Cookies["Personality Prediction"] != null)
+            {
+                Session["Email"] = Request.Cookies["Personality Prediction"]["Email"];
+                Session["Password"] = Request.Cookies["Personality Prediction"]["Password"];
+                Session.Timeout = 720;
+                // Response.Redirect("AdminList.aspx");
+            }
         }
     }
 }
