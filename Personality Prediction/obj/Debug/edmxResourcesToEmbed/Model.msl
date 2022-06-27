@@ -45,6 +45,7 @@
     <EntitySetMapping Name="CustRegTbls">
       <EntityTypeMapping TypeName="PersonalityPredictionModel.CustRegTbl">
         <MappingFragment StoreEntitySet="CustRegTbl">
+          <ScalarProperty Name="File" ColumnName="File" />
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="Password" ColumnName="Password" />
           <ScalarProperty Name="LastName" ColumnName="LastName" />

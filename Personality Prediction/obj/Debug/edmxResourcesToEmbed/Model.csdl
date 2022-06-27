@@ -99,6 +99,7 @@
     <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Password" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
     <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="File" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <ComplexType Name="CustomerList_Result">
     <Property Type="Int32" Name="CustomerID" Nullable="false" />

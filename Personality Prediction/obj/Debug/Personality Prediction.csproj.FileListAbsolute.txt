@@ -171,7 +171,3 @@ D:\PersonalityPrediction\Personality Prediction\Personality Prediction\bin\Micro
 D:\PersonalityPrediction\Personality Prediction\Personality Prediction\obj\Debug\Personality Prediction.csprojResolveAssemblyReference.cache
 D:\PersonalityPrediction\Personality Prediction\Personality Prediction\obj\Debug\Personality Prediction.dll
 D:\PersonalityPrediction\Personality Prediction\Personality Prediction\obj\Debug\Personality Prediction.pdb
-C:\Users\Rimsha\Downloads\Personality Prediction\Personality Prediction\obj\Debug\Personality Prediction.csproj.AssemblyReference.cache
-C:\Users\Rimsha\Downloads\Personality Prediction\Personality Prediction\obj\Debug\Personality Prediction.csproj.CoreCompileInputs.cache
-C:\Users\Rimsha\Downloads\Personality Prediction\Personality Prediction\obj\Debug\Personality Prediction.dll
-C:\Users\Rimsha\Downloads\Personality Prediction\Personality Prediction\obj\Debug\Personality Prediction.pdb

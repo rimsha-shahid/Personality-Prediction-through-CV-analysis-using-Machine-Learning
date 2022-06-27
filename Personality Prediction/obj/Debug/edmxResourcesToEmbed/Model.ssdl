@@ -45,6 +45,7 @@
     <Property Name="LastName" Type="varchar" MaxLength="50" />
     <Property Name="Password" Type="varchar" MaxLength="150" />
     <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="File" Type="varbinary(max)" />
   </EntityType>
   <EntityType Name="PersonalityQuestionTbl">
     <Key>
