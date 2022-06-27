@@ -43,10 +43,10 @@ namespace Personality_Prediction
                ApptitudeQuestiontbl sa = new ApptitudeQuestiontbl();
                 sa.CorrectAnswer = SubmitAQans.Text;
                 string AQradiobtn = string.Empty;
-              if (.Checked)
-                {
-                    AQradiobtn = "option a";
-                }
+             // if (.Checked)
+             //   {
+             //       AQradiobtn = "option a";
+              //  }
                 //RadioButton RB1 = new RadioButton();
                 //if (RB1.Checked == true)
                 //{
@@ -67,7 +67,7 @@ namespace Personality_Prediction
 
                 //}
 
-                db.submittedanswertbls.Add(sa);
+                //db.submittedanswertbls.Add(sa);
                 db.SaveChanges();
                 Response.Write("<script>alert('Your Answer is Submitted Successfully')</script>");
 

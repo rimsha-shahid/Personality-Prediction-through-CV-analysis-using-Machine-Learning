@@ -111,8 +111,11 @@
     <Content Include="Admin\CustomerList.aspx" />
     <Content Include="Admin\CustomerLogin.aspx" />
     <Content Include="Admin\CustomerRegistration.aspx" />
+    <Content Include="Apptitude and Personality Questions\Apptitude Questions.aspx" />
+    <Content Include="Apptitude and Personality Questions\Personaliy Questions.aspx" />
     <Content Include="Apptitude Question.aspx" />
     <Content Include="ApptitudeQuestionsList.aspx" />
+    <Content Include="First Page.aspx" />
     <Content Include="Images\FormsBg.jpg" />
     <Content Include="Images\loginimg.png" />
     <Content Include="Job Details\Add Job Details.aspx" />
@@ -257,6 +260,20 @@
     <Compile Include="Answertbl.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Apptitude and Personality Questions\Apptitude Questions.aspx.cs">
+      <DependentUpon>Apptitude Questions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Apptitude and Personality Questions\Apptitude Questions.aspx.designer.cs">
+      <DependentUpon>Apptitude Questions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Apptitude and Personality Questions\Personaliy Questions.aspx.cs">
+      <DependentUpon>Personaliy Questions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Apptitude and Personality Questions\Personaliy Questions.aspx.designer.cs">
+      <DependentUpon>Personaliy Questions.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Apptitude Question.aspx.cs">
       <DependentUpon>Apptitude Question.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -291,6 +308,13 @@
     </Compile>
     <Compile Include="DeletePersonalityQuestion_Result.cs">
       <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="First Page.aspx.cs">
+      <DependentUpon>First Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="First Page.aspx.designer.cs">
+      <DependentUpon>First Page.aspx</DependentUpon>
     </Compile>
     <Compile Include="GetAdminList_Result.cs">
       <DependentUpon>Model.tt</DependentUpon>
@@ -494,6 +518,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Data Of Upload Items\" />
+    <Folder Include="Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

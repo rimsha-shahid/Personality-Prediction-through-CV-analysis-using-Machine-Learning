@@ -42,6 +42,9 @@
                              <asp:RadioButton runat="server" ID="RBopt3" Text='<%#Eval ("Option3") %>' GroupName="PQradiobtn"></asp:RadioButton>
                              <asp:RadioButton runat="server" ID="RBopt4" Text='<%#Eval ("Option4") %>' GroupName="PQradiobtn"></asp:RadioButton>
                              <asp:RadioButton runat="server" ID="RBopt5" Text='<%#Eval ("Option5") %>' GroupName="PQradiobtn"></asp:RadioButton>
+                        <br />
+                             <asp:Button runat="server" ID="SubmitPQans" Text="Submit" OnClick="SubmitPQans_Click"/>
+
                         </td>
                     </tr>
                     <tr>
@@ -53,7 +56,8 @@
             </ItemTemplate>
 
         </asp:Repeater>
-        <asp:Button runat="server" ID="SubmitPQans" Text="Submit" OnClick="SubmitPQans_Click"/>
+        
+
         <br />
         <asp:Button runat="server" ID="ShowPQans" Text="Show Selected Answer" OnClick="ShowPQans_Click"/>
       </div>
